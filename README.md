@@ -19,12 +19,13 @@ Examples of HTML, CSS & JavaScript code for students 3AIN & 3BIN.
 Here you will find all the examples provided during the course.
 
 **Feel absolutely free to make them part of your work.**
-| example                           | topic                |
-| --------------------------------- | -------------------- |
-| [index.html](examples/index.html) | modello di documento |
+| example                           | topic                     |
+| --------------------------------- | ------------------------- |
+| [index.html](examples/index.html) | modello di documento      |
+| [template](examples/template)     | modello di struttura sito |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 
-| exercise                   | solution     |
-| -------------------------- | ------------ |
+| exercise                    | solution     |
+| --------------------------- | ------------ |
 | [first](exercises/first.md) | not provided |
