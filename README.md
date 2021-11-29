@@ -24,6 +24,7 @@ Here you will find all the examples provided during the course.
 | [index.html](examples/index.html) | modello di documento      |
 | [template](examples/template)     | modello di struttura sito |
 | [elementi](examples/elements/index.html) | Esempi di elementi html        |
+| [stili](examples/styles/index.html) | Esempi di stili CSS        |
 ## List of exercises
 Here you will find *some* of the exercises assigned during the course and *probably* their solutions.
 

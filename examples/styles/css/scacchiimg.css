@@ -1,0 +1,52 @@
+/* scacchi style */
+
+.scacchiera td {
+    /* Basic checkboard styling all cells */
+    width: 45px;
+    height: 45px;
+    background-color: #404040;
+    border: 2px solid #404040;
+}
+
+.scacchiera tr:nth-child(even) td:nth-child(odd), .scacchiera tr:nth-child(2n+1) td:nth-child(2n) {
+    /* Basic checkboard styling white cells */
+    background-color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+
+.scacchiera tr:nth-child(n) td:nth-child(n):hover {
+    /* must be very specific to override previous selector */
+    border-color: red;
+    border-radius: -50px;
+    transition: border-radius 2s linear 0.2s;
+    transition: border-color 2s linear 0.2s;
+}
+
+/* rules to reverse the checkboard : no js required !!! */
+
+#reverse {
+    /* hide the input checkbox */
+    display: none;
+}
+
+#reverse~label {
+    /* style the labels as buttons */
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+#reverse:not(:checked)~#white {
+    /* choose which label to show according to input status */
+    display: none;
+}
+
+#reverse:checked~#black {
+    display: none;
+}
+
+#reverse:checked~figure>.scacchiera, #reverse:checked~figure>.scacchiera td, #reverse:checked~figure>.scacchiera th, #reverse:checked~figure>.scacchiera caption {
+    /* choose whether we need to transform the checkboard according to input status */
+    transform: rotateZ(180deg);
+    transition: transform 2s linear 0.2s;
+}
