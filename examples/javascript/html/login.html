@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Login simulato</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Simulazione di login">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/login.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simulazione di login ad un sito</h1>
+    <p>Default username: admin, password: admin.</p>
+    <p><a href="../js/login.js">Vedi il codice</a></p>
+    <p id="message">Immetti username e password per accedere</p>
+    <label>Username:<input type="text" id="user" placeholder="enter username"></label>
+    <label>Password:<input type="password" id="pass" placeholder="enter password"></label>
+    <button type="button" onclick="checkLogin()">Accedi</button>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

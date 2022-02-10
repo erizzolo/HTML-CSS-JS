@@ -12,7 +12,6 @@
 
 <body>
     <h1>Esempi di codice Javascript</h1>
-    <a href="html/contatore.html">Esempio contatore</a>
     <p>NOTA: questi esempi usano generalmente script specifici per ogni documento</p>
     <ul>
         <li>
@@ -21,63 +20,13 @@
         <li>
             <a href="html/howtogetinfo.html">Come ottenere informazioni dal documento web</a>
         </li>
+        <li>
+            <a href="html/login.html">Esempio (fittizio) di login</a>
+        </li>
+        <li>
+            <a href="html/change.html">Esempio (fittizio) di cambio password</a>
+        </li>
     </ul>
-    <a href="html/main.html">Esempio 2022-01-27</a>
-    <h1>Come ottenere informazioni dal documento</h1>
-    <h2>Da un elemento qualsiasi ad es. un paragrafo</h2>
-    <p id="msg">Messaggio</p>
-    <pre>
-    <code>
-        let h = document.getElementById('msg').innerHTML
-        let t = document.getElementById('msg').innerText
-    </code>
-    </pre>
-
-    <h2>Da un elemento di input testuale</h2>
-    <div id="testcentro">
-        <img src="images/Nw.png" alt="logo">
-    </div>
-    <label>Testo:<input oninput="showText()" type="text" id="text" value="Ciao mondo!"></label>
-    <pre>
-    <code>
-        let h = document.getElementById('text').innerHTML // no '<span id="textHTML"></span>'
-        let t = document.getElementById('text').innerText // no '<span id="textText"></span>'
-        let v = document.getElementById('text').value // sì '<span id="textValue"></span>'
-    </code>
-    </pre>
-
-    <h2>Da un elemento di input numerico</h2>
-    <label>Numero:<input type="number" id="numero" value="3.14"></label>
-    <pre>
-    <code>
-        let v = document.getElementById('numero').value // no: stringa '3.14'
-        let n = document.getElementById('numero').valueAsNumber // sì: numero 3.14
-        // eventuale controllo
-        if(isNaN(n)) alert('Not a Number!!')
-    </code>
-    </pre>
-
-    <h2>Da un elemento di input tipo checkbox</h2>
-    <label>Checkbox:<input type="checkbox" id="chk"></label>
-    <code>
-        <pre>
-            let h = document.getElementById('chk').value // no
-            let t = document.getElementById('chk').checked // sì
-        </pre>
-    </code>
-
-    <h2>Da un elemento di input tipo radio</h2>
-    <label>Opzione 1:<input type="radio" name="opzione" id="opt1" value="Fiat"></label>
-    <label>Opzione 2:<input type="radio" name="opzione" id="opt2" value="Opel"></label>
-    <label>Opzione 3:<input type="radio" name="opzione" id="opt3" value="Ferrari"></label>
-    <code>
-        <pre>
-            let h = document.getElementById('chk').value // no
-            let t = document.getElementById('chk').checked // sì
-        </pre>
-    </code>
-
-    <button onclick="saluta()">Premimi!</button>
 
 </body>
 

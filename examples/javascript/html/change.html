@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Cambio password simulato</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Simulazione di cambio password">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/change.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simulazione di cambio password ad un sito</h1>
+    <p>Default password: admin.</p>
+    <p><a href="../js/change.js">Vedi il codice</a></p>
+    <p>Immetti la vecchia password, quella nuova e la conferma</p>
+    <p id="message"></p>
+    <label>Old password:
+        <input type="password" id="old" placeholder="old password" oninput="checkOld()">
+    </label>
+    <label>New password:
+        <input type="password" id="new" placeholder="new password" oninput="checkNew()" disabled>
+    </label>
+    <label>Confirm new password:
+        <input type="password" id="again" placeholder="confirm new password" oninput="checkNew()" disabled>
+    </label>
+    <button type="button" id="change" onclick="change()" disabled>Change</button>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>
