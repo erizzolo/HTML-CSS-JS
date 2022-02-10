@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>How to get information</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Informazioni da elementi di input radio">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/inforadio.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body onload="showInput()">
+    <h1>Da un elemento di input radio</h1>
+    <p>Ciascun elemento ha la proprietà <strong>checked</strong>, ma è scomodo testarli tutti quando sappiamo che uno
+        solo può essere selezionato.</p>
+    <p>
+        Quindi si usa il metodo <strong>querySelector</strong> con un selettore particolare:
+        <strong>input[name="nome_gruppo"]:checked</strong> dove:
+    </p>
+    <ul>
+        <li>
+            nome_gruppo è il valore dell'attributo name usato per raggruppare gli input
+        </li>
+    </ul>
+    <p>
+        Il significato del selettore è: gli elementi di tipo input con attributo name uguale a "nome_gruppo" e
+        selezionati.
+    </p>
+    <p>
+        Dopodichè si può usare, ad esempio, la proprietà value dell'elemento.
+    </p>
+    <p>Attenzione perché se nessuna opzione è selezionata il metodo restituisce <strong>null</strong>!!!</p>
+    <p><a href="../js/inforadio.js">Vedi il codice</a></p>
+    <p>Scegli il tuo linguaggio preferito:</p>
+    <label>HTML<input oninput="showInput()" type="radio" name="linguaggio" value="HTML"></label>
+    <label>Javascript<input oninput="showInput()" type="radio" name="linguaggio" value="js"></label>
+    <label>Italiano<input oninput="showInput()" type="radio" name="linguaggio" value="italian"></label>
+    <label>qualunque, ma non di programmazione<input oninput="showInput()" type="radio" name="linguaggio"
+            value="any"></label>
+    <pre>
+    <code>
+        let e = document.querySelector('input[name="linguaggio"]:checked')  // 1 '<span id="radioQuery"></span>'
+        if(e == null) { // nessuna opzione selezionata
+            document.getElementById('radioNone').innerText = 'nessuna'  //  '<span id="radioNone"></span>'
+        } else {
+            let scelta = e.value
+            document.getElementById('radioValue').innerText = scelta // '<span id="radioValue"></span>'
+        }
+    </code>
+    </pre>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

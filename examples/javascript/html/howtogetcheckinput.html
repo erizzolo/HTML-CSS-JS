@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>How to get information</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Informazioni da un elemento di input checkbox">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/infocheck.js"></script>
+</head>
+
+<body>
+    <h1>Da un elemento di input checkbox</h1>
+    <p>Dopo aver ottenuto un riferimento all'elemento, si usa la proprietà <strong>checked</strong>.</p>
+    <p><a href="../js/infocheck.js">Vedi il codice</a></p>
+    <label>Accetto le condizioni <input oninput="showInput()" type="checkbox" id="check"></label>
+    <pre>
+    <code>
+        let h = document.getElementById('check').innerHTML // no '<span id="checkHTML"></span>'
+        let t = document.getElementById('check').innerText // no '<span id="checkText"></span>'
+        let v = document.getElementById('check').value // no '<span id="checkValue"></span>'
+        let x = document.getElementById('check').checked // sì '<span id="checkChecked"></span>'
+    </code>
+    </pre>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

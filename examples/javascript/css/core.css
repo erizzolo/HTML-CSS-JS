@@ -1,0 +1,8 @@
+/* core style */
+div#testcentro {
+    text-align: center;
+}
+
+input[name="opzione"]:checked {
+    display: none;
+}

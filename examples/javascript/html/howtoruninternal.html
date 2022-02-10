@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Site main page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Elementi script interni">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+</head>
+
+<body>
+    <script>
+        alert('Codice eseguito dal primo script (documento non caricato!)')
+    </script>
+    <h1>Codice Javascript inserito in elementi script interni</h1>
+    <p>Codice Javascript può essere inserito in documenti web tramite un elemento <strong>script</strong>, la cui
+        posizione, non vincolata, determina l'esecuzione <strong>immediata</strong> del codice.</p>
+    <p>
+        Questo documento contiene il seguente script all'inizio del body:
+        <span class="code">
+            &lt;script>
+            alert('Codice eseguito dal primo script (documento non caricato!)')
+            &lt;/script>
+        </span>
+        e quando il browser incontra l'elemento script (l'ha già incontrato!) lo esegue!!!
+    </p>
+    <p>
+        Questo documento contiene il seguente script alla fine del body:
+        <span class="code">
+            &lt;script>
+            alert('Codice eseguito dal secondo script (documento caricato!)')
+            &lt;/script>
+        </span>
+        e quando il browser incontra l'elemento script (lo incontrerà non appena chiuderete la finestra del primo alert)
+        lo esegue!!!
+    </p>
+    <p>Naturalmente anche questo metodo è sconsigliato in generale (come gli stili interni) salvo casi particolari</p>
+    <a href="../index.html"> back to home page </a>
+    <script>
+        alert('Codice eseguito dal secondo script (documento caricato!)')
+    </script>
+</body>
+
+</html>

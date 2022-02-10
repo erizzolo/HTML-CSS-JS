@@ -1,0 +1,9 @@
+/* core style */
+span.code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightgrey;
+}
+
+.esempio-bad {
+    background-color: yellow;
+}

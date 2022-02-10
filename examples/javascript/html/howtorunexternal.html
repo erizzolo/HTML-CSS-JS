@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Site main page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Elementi script esterni">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/externalfirst.js"></script>
+</head>
+
+<body>
+    <h1>Codice Javascript inserito in elementi script esterni</h1>
+    <p>Codice Javascript può essere inserito in documenti web tramite un elemento <strong>script</strong>, la cui
+        posizione, non vincolata, determina l'esecuzione <strong>immediata</strong> del codice: se è presente
+        l'attributo <strong>src</strong> esso determina il file esterno contenente il codice che sarà eseguito.</p>
+    <p>
+        Questo documento contiene il seguente script all'inizio del body:
+        <span class="code">
+            &lt;script src="../js/externalfirst.js">&lt;/script>
+        </span>
+        e quando il browser incontra l'elemento script (l'ha già incontrato!) lo esegue!!!
+    </p>
+    <p>
+        Questo documento contiene il seguente script alla fine del body:
+        <span class="code">
+            &lt;script src="../js/externalfirst.js">&lt;/script>
+        </span>
+        e quando il browser incontra l'elemento script (lo incontrerà non appena chiuderete la finestra del primo alert)
+        lo esegue!!!
+    </p>
+    <p>Naturalmente questo metodo è consigliato in generale poichè consente il riutilizzo del codice in più pagine.</p>
+    <a href="../index.html"> back to home page </a>
+    <script src="../js/externalfirst.js"></script>
+</body>
+
+</html>

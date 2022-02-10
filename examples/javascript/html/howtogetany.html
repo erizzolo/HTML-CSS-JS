@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>How to get information</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Informazioni da un elemento qualsiasi">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/infoany.js"></script>
+</head>
+
+<body>
+    <h1>Come ottenere informazioni da un elemento qualsiasi ad es. un paragrafo, una table ...</h1>
+    <p>Sostanzialmente, si usa una funzione dell'oggetto <strong>document</strong>, ad esempio getElementById, per
+        ottenere un riferimento all'elemento.</p>
+    <p>Dopodichè, si accede all'informazione che interessa (magari per modificarla...).</p>
+    <a href="../js/infoany.js">Vedi il codice</a>
+    <p class="esempio any element" id="theParagraph" onclick="getInfoAboutParagraph()">
+        Questo paragrafo ha il seguente tag di apertura:
+        <span class="code">
+            &lt;p class="esempio any element" id="theParagraph" onclick="getInfoAboutParagraph()">
+        </span>
+        e quindi quando l'utente farà "click" con il mouse su di esso, verrà mostrata info sul paragrafo nell'elemento
+        seguente !!!
+    </p>
+    <ul>
+        <li>proprietà outerHTML
+            <p id="outer">
+                No info so far...
+            </p>
+        </li>
+        <li>proprietà innerHTML
+            <p id="innerHTML">
+                No info so far...
+            </p>
+        </li>
+        <li>proprietà innerText
+            <p id="innerText">
+                No info so far...
+            </p>
+        </li>
+        <li>proprietà classList
+            <p id="classList">
+                No info so far...
+            </p>
+        </li>
+    </ul>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Site main page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Javascript in attributi degli elementi">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+</head>
+
+<body>
+    <h1>Codice Javascript inserito in attributi degli elementi</h1>
+    <p>Particolari attributi <strong>on&lt;TipoEvento&gt;</strong> degli elementi possono contenere codice
+        che sarà eseguito quando il particolare evento accade.</p>
+    <p class="esempio" onclick="alert('Codice eseguito per click sul paragrafo')">
+        Questo paragrafo ha il seguente tag di apertura:
+        <span class="code">
+            &lt;p class="esempio" onclick="alert('Codice eseguito per click sul paragrafo')">
+        </span>
+        e quindi quando l'utente farà "click" con il mouse su di esso, il codice sarà eseguito !!!
+    </p>
+    <p>Naturalmente questo metodo è sconsigliato in generale (come gli stili inline) ed il codice utilizzato
+        deve essere generalmente limitato ad un unico tipo di evento e un'unica chiamata a funzione!!!</p>
+    <p><strong>Vanno assolutamente evitati casi del tipo seguente:</strong></p>
+    <p class="esempio-bad" onclick="alert('Click')" onmouseenter="alert('mouseEnter')"
+        onmouseleave="alert('mouseLeave')"
+        ondblclick="for(let i = 0; i < 1; ++i) if(i == 0) { alert('Hello') } else { alert('What???'); i-- }">
+        Questo paragrafo ha il seguente tag di apertura:
+        <span class="code">
+            &lt;p class="esempio-bad" onclick="alert('Click')" onmouseenter="alert('mouseEnter')"
+            onmouseleave="alert('mouseLeave')"
+            ondblclick="for(let i = 0; i &lt; 1; ++i) if(i==0) { alert('Hello') } else { alert('What???');
+            i--
+            }">
+            >
+        </span>
+        e quindi il codice diventa incomprensibile anche a programmatori esperti !!!
+    </p>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

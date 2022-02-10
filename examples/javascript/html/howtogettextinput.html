@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>How to get information</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Informazioni da un elemento di input testuale">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/infotext.js"></script>
+</head>
+
+<body>
+    <h1>Da un elemento di input testuale</h1>
+    <p>Dopo aver ottenuto un riferimento all'elemento, si usa la proprietà <strong>value</strong>.</p>
+    <p><a href="../js/infotext.js">Vedi il codice</a></p>
+    <label>Testo:<input oninput="showInput()" type="text" id="text" value="Ciao mondo!"></label>
+    <pre>
+    <code>
+        let h = document.getElementById('text').innerHTML // no '<span id="textHTML"></span>'
+        let t = document.getElementById('text').innerText // no '<span id="textText"></span>'
+        let v = document.getElementById('text').value // sì '<span id="textValue"></span>'
+    </code>
+    </pre>
+    <label>Password:<input oninput="showInput()" type="password" id="pass" value="initial_password"></label>
+    <pre>
+    <code>
+        let h = document.getElementById('text').innerHTML // no '<span id="passHTML"></span>'
+        let t = document.getElementById('text').innerText // no '<span id="passText"></span>'
+        let v = document.getElementById('text').value // sì '<span id="passValue"></span>'
+    </code>
+    </pre>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

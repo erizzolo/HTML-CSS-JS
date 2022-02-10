@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>How to get information</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Informazioni da un elemento di input numerico">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/infonumber.js"></script>
+</head>
+
+<body>
+    <h1>Da un elemento di input numerico</h1>
+    <p>Dopo aver ottenuto un riferimento all'elemento, si usa la proprietà <strong>valueAsNumber</strong>.</p>
+    <p>Attenzione: il risultato può essere <strong><abbr title="Not a Number">NaN</abbr></strong>!!!</p>
+    <p><a href="../js/infonumber.js">Vedi il codice</a></p>
+    <label>Number:<input oninput="showInput()" type="number" id="number" value="33"></label>
+    <pre>
+    <code>
+        let h = document.getElementById('number').innerHTML // no '<span id="numberHTML"></span>'
+        let t = document.getElementById('number').innerText // no '<span id="numberText"></span>'
+        let v = document.getElementById('number').value // no '<span id="numberValue"></span>'
+        let x = document.getElementById('number').valueAsNumber // sì '<span id="numberAsNumber"></span>'
+    </code>
+    </pre>
+    <label>Volume control:<input oninput="showInput()" type="range" id="range" value="10" min="1" max="100"></label>
+    <pre>
+    <code>
+        let h = document.getElementById('range').innerHTML // no '<span id="rangeHTML"></span>'
+        let t = document.getElementById('range').innerText // no '<span id="rangeText"></span>'
+        let v = document.getElementById('range').value // no '<span id="rangeValue"></span>'
+        let x = document.getElementById('range').valueAsNumber // sì '<span id="rangeAsNumber"></span>'
+    </code>
+    </pre>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>
