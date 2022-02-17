@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Calcolo Indice di Massa Corporea</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Calcolo Indice di Massa Corporea">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/imc.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Calcolo Indice di Massa Corporea
+    </h1>
+    <p>
+        per i dettagli vedasi <a href="https://it.wikipedia.org/wiki/Indice_di_massa_corporea">qui</a>
+    </p>
+    <p>
+        Si presenta l'esercizio proposto, semplificato in modo da suddividere il valore risultante in tre sole fasce:
+        sottopeso, normale, sovrappeso.
+    </p>
+    <div>
+        <label>Uomo <input type="radio" name="genere" value="male"></label>
+        <label>Donna <input type="radio" name="genere" value="female"></label>
+        <label>Massa [kg]<input type="number" id="mass" value="70" min="5" max="200"></label>
+        <label>Statura [cm]<input type="number" id="height" value="170" min="50" max="250"></label>
+        <button type="button" onclick="calcola()">Calcola</button>
+    </div>
+    <p id="result">Nessun calcolo effettuato, per ora</p>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

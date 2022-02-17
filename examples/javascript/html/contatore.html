@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Esempio di contatore</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Esempio di applicazione con storia">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/contatore.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+        span#complex img {
+            width: 1.5em;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Questo esempio serve a illustrare l'opportunità di memorizzare la storia dell'applicazione tramite variabili
+        globali, anziché in elementi del documento.
+    </p>
+    <p>
+        Ciò perchè la gestione risulta semplificata e le modifiche all'interfaccia utente hanno minore impatto sul
+        codice.
+    </p>
+    <p>
+        In questo esempio la storia dell'applicazione è semplicemente costituita dal numero di click effettuati
+        dall'utente, che vengono mostrati in un opportuno elemento di output.
+    </p>
+    <div>
+        <label>Usa variabili globali <input type="radio" name="method" value="globals" checked></label>
+        <label>Usa elementi del documento <input type="radio" name="method" value="elements"></label>
+    </div>
+    <button type="button" onclick="cliccato()">Cliccami</button>
+    <p>Hai cliccato <span id="simple">0</span> volte</p>
+    <p>Hai cliccato <span id="complex"><img src="../images/0.png" alt="0"></span> volte</p>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>
