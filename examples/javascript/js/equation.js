@@ -5,7 +5,7 @@ function risolvi() {
     console.log('a = ' + a + ' b = ' + b + ' c = ' + c)
     if (isNaN(a) || isNaN(b) || isNaN(c)) {
         error('bad input')
-    } else if(a==0) {
+    } else if (a == 0) {
         error('non secondo grado')
     } else {
         // let delta = b ** 2 - 4 * a * c
@@ -26,14 +26,16 @@ function risolvi() {
         }
         console.log('x1 = ' + x1 + ', x2 = ' + x2)
         showResult(numRadiciDistinte, x1, x2)
-        verifica(a, b, c, x1, x2)
+        if (numRadiciDistinte != 0) {
+            verifica(a, b, c, x1, x2)
+        }
     }
 }
 
 function verifica(a, b, c, x1, x2) {
     let v1 = ((a * x1) + b) * x1 + c
     let v2 = ((a * x2) + b) * x2 + c
-    document.getElementById('result').innerHTML += '<br>v<sub>1</sub> = ' + v1  + ', v<sub>2</sub> = ' + v2
+    document.getElementById('result').innerHTML += '<br>v<sub>1</sub> = ' + v1 + ', v<sub>2</sub> = ' + v2
 
 }
 

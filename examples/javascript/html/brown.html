@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Moto browniano</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Moto browniano">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/brown.js"></script>
+</head>
+
+<body>
+    <label>X iniziale<input type="number" id="xinit" value="50"></label>
+    <label>Y iniziale<input type="number" id="yinit" value="50"></label>
+    <label>Numero di spostamenti<input type="number" id="spostamenti" value="10"></label>
+    <button type="button" onclick="genera()">Genera</button>
+    <button type="button" onclick="disegna()">Disegna</button>
+    <p id="result"></p>
+    <canvas id="tela"></canvas>
+    <table>
+        <thead>
+            <tr>
+                <th>t</th>
+                <th>x</th>
+                <th>y</th>
+                <th>t</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>50</td>
+                <td>50</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>

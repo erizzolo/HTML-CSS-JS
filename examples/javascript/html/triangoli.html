@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Verifica proprietà di un triangolo dati gli angoli</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Emanuele Rizzolo">
+    <meta name="description" content="Verifica proprietà di un triangolo dati gli angoli">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/examples.css">
+    <script src="../js/core.js"></script>
+    <script src="../js/triangoli.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+
+        input {
+            margin-left: 2em;
+        }
+
+        span,
+        input[name="tipo"] {
+            display: none;
+        }
+
+        input[name="tipo"]:checked+span {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Verifica proprietà di un triangolo dati gli angoli</h1>
+    <label>&alpha;<input type="number" id="a" value="60"></label>
+    <label>&beta;<input type="number" id="b" value="60"></label>
+    <label>&gamma;<input type="number" id="c" value="60"></label>
+    <br>
+    <button type="button" onclick="verifica()">Verifica!</button>
+    <p id="triangolo">Niente per ora</p>
+    <p id="rettangolo">Niente per ora</p>
+    <p>
+        Il triangolo è
+        <input type="radio" name="tipo" value="scaleno"><span>scaleno</span>
+        <input type="radio" name="tipo" value="equilatero"><span>equilatero</span>
+        <input type="radio" name="tipo" value="isoscele"><span>isoscele</span>
+    </p>
+    <a href="../index.html"> back to home page </a>
+</body>
+
+</html>
